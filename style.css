@@ -1,0 +1,264 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Cormorant Garamond', serif;
+    cursor: crosshair;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    height: 3000px;
+    max-width:100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(226, 218, 208);
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+    }
+
+::-webkit-scrollbar-thumb{
+    background: #474647;
+    background-clip: content-box; 
+    border-radius: 50px;
+    background-clip: padding-box;
+    border: 6px #e2dad0 solid;
+    }
+    
+::-webkit-scrollbar-thumb:hover{
+    background: rgb(226, 218, 208);
+    }
+
+
+
+a, a:active{
+    text-decoration: none;
+    color:black;
+}
+
+header{
+    height:100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position:sticky;
+    z-index: 2;
+    text-align: center;
+    margin-top:30px;
+    margin-bottom:10px;
+    }
+
+header::after{
+    content:'';
+    border-bottom: 1px rgb(0, 0, 0) solid;
+    height: 50px;
+    width: 100%;
+    transform: translatey(-50%);
+    position: absolute;
+    z-index: -1;
+}
+
+.PHeader{
+    font-size:30px;
+    margin:auto;
+    background-color: rgb(226, 218, 208);
+    padding-left:20px;
+    padding-right:20px;
+    letter-spacing: 5px;
+}
+
+.TitreHeader{
+    font-size: 80px;
+    margin:auto;
+    background-color: rgb(226, 218, 208);
+    padding-left:20px;
+    padding-right:20px;
+}
+
+.underheader{
+    margin-top:10px;
+    margin-bottom:30px;
+}
+
+.topimage{
+    width: 75vw;
+    height: 390px;
+    overflow: hidden;
+    background-image: url("./imgs/topimage.jpg");
+    background-position: center;
+    background-repeat: none;
+    background-size: 110%;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.topimage:hover{
+    background-size:100%;
+}
+
+
+main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.leftbar, .rightbar{
+    height: auto;
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+#LeftLink, #RightLink{
+    width: 250px;
+    font-size: 20px;
+    letter-spacing: 3px;
+    position: fixed;
+    cursor: pointer;
+    margin-top: 180px;
+}
+
+#LeftLink{
+    transform: rotate(270deg);
+}
+
+#RightLink{
+    margin-top: 200px;
+    display: inline-block;
+    transform: scaleX(-1); 
+    transform: rotate(90deg);
+}
+
+#LeftLink:hover,#RightLink:hover {
+    color:rgb(177, 177, 177);
+    transition:all 0.5s ease-in-out;
+}
+
+.leftside{
+    height: auto;
+    flex:3;
+    border-right:1px solid rgb(109, 109, 109);
+    display: flex;
+    flex-direction: column;
+}
+
+.leftsideIMG1{
+    height:500px;
+    width:800px;
+    background-image: url("./imgs/leftsideIMG1.jpg");
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    position: relative;
+    cursor: pointer;
+    margin-top:150px;
+    text-align: end;
+    transition: all 0.3s ease-in-out;
+}
+
+.leftsideIMG1:hover{
+    background-size: 85%;
+}
+
+.caption1{
+    position: absolute;
+    bottom:0;
+    padding-left:20%;
+    font-size: 20px;
+}
+
+.leftsideIMG2{
+    height:800px;
+    width:500px;
+    background-image: url("./imgs/leftsideIMG2.jpg");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    cursor: pointer;
+    margin-top:400px;
+    text-align: end;
+    transition: all 0.3s ease-in-out;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.leftsideIMG2:hover{
+    background-size: 95%;
+}
+
+
+.rightside{
+    height: auto;
+    flex:3;
+    border-left:1px solid rgb(109, 109, 109);
+    display: flex;
+    flex-direction: column;
+}
+
+.rightsideIMG1{
+    height:800px;
+    width:500px;
+    background-image: url("./imgs/rightsideIMG1.jpg");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    cursor: pointer;
+    margin-top:400px;
+    text-align: end;
+    transition: all 0.3s ease-in-out;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.rightsideIMG1:hover{
+    background-size: 95%;
+}
+
+.rightsideIMG2{
+    height:800px;
+    width:500px;
+    background-image: url("./imgs/rightsideIMG2.jpg");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    cursor: pointer;
+    margin-top:400px;
+    text-align: end;
+    transition: all 0.3s ease-in-out;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.rightsideIMG2:hover{
+    background-size: 95%;
+}
+
+.caption2{
+    position: absolute;
+    bottom:0;
+    padding-left:20%;
+    padding-bottom:10%;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
